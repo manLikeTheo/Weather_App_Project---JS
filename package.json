@@ -1,0 +1,25 @@
+{
+  "name": "weather_app_project---js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manLikeTheo/Weather_App_Project---JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manLikeTheo/Weather_App_Project---JS/issues"
+  },
+  "homepage": "https://github.com/manLikeTheo/Weather_App_Project---JS#readme",
+  "devDependencies": {
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}

@@ -1,0 +1,421 @@
+:root {
+    --background-heading: rgb(10, 65, 102);
+    --value-text: rgb(82, 87, 9);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.weather-app-container{
+    min-height: 100vh;
+    width: 100%;
+    background: url(/Img/resul-mentes-DbwYNr8RPbg-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo i {
+    /* padding: 1rem 1.5rem; */
+    border-radius: 75% 35%;
+    color: rgb(246, 250, 31);
+    font-size: 5rem;
+}
+
+
+.search-form {
+    display: flex;
+}
+
+input[type="search"] {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    /* outline: 0; */
+    border: 0;
+    letter-spacing: 0.1rem;
+    min-width: 300px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: var(--background-heading);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.submit-btn:hover {
+    transform: scale(0.9);
+    opacity: 0.8;    
+}
+/* End of Header */
+
+/* Celcius -Farenheit */
+.toggle-degree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.toggle-degree * {
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 0.3rem;
+    border: 0;
+    background-color: var(--background-heading);
+    cursor: pointer;
+}
+
+.toggle-degree *:hover {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+/* End of celcius-Farenheit */
+
+/* Main - Weather - Info */
+main.weather-section {
+    width: 75%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    border: 1rem solid rgb(11, 142, 182);
+    border-radius: 15% 20%;
+}
+
+main .location-time {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.location-time .city {
+    font-size: 1.9rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    color: var(--value-text);
+    font-style: italic;
+}
+
+.city i{
+    font-size: 1.25rem;
+}
+
+.location-time .country {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    color: var(--background-heading)
+}
+
+.location-time .date-time {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: #444;
+}
+
+.main-parameters {
+    color: var(--value-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-parameters .temperature{
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.temperature i.fa-temperature-low {
+    color:rgb(10, 65, 102);
+    font-size: 1.5rem;
+}
+
+.temperature i {
+    color: rgb(246, 250, 31);
+}
+
+.cloud-info, .feels-like-info{
+    font-weight: 600;
+}
+
+.other-parameters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.wind,
+.humidity,
+.visibility,
+.uv-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.wind-value,
+.humidity-value,
+.visibility-value,
+.uv-index-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.uv-index-value {
+    border-radius: 49%;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: rgb(246, 250, 31);
+}
+
+footer {
+    background-color: var(--background-heading);
+    /* border-bottom: 2px solid var(--value-text); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+}
+
+.project-link {
+    display: flex;
+    gap: 1rem;
+    color: #fff;
+}
+
+footer .project-link a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: 0;
+    letter-spacing: 1px;
+}
+
+.project-link a:hover {
+    transform: scale(1.1);
+    /* color: purple; */
+    text-decoration: underline;
+}
+/* End of Weather - Info */
+
+/* Utility Style */
+.loading-spinner {
+    font-size: 2.5rem;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* MOBILE STYLES */
+/* PHONES */
+@media screen and (min-width: 279px) {
+
+    .header {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .search-form {
+        display: flex;
+    }
+    
+    input[type="search"] {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        /* outline: 0; */
+        border: 0;
+        letter-spacing: 0.1rem;
+        min-width: 200px;
+        font-size: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 0.3rem 0.75rem;
+        border-radius: 0.5rem;
+        border: 0;
+        background-color: var(--background-heading);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 900;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+
+    .toggle-degree {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .toggle-degree * {
+        font-size: 0.75rem;
+        color: #fff;
+        letter-spacing: 0.1rem;
+        font-weight: 900;
+        padding: 0.3rem 0.75rem;
+        border-radius: 0.3rem;
+        border: 0;
+        background-color: var(--background-heading);
+        cursor: pointer;
+    }
+    
+    .toggle-degree *:hover {
+        transform: scale(1.25);
+        opacity: 0.8;
+    }
+
+    main.weather-section {
+        max-width: 500px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        border: 1rem solid rgb(11, 142, 182);
+        border-radius: 15% 20%;
+    }
+
+    main .location-time {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .other-parameters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1rem;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .other-parameters * {
+        font-size: 1rem;
+        text-align: center;
+        /* color: rgb(110, 128, 9); */
+    }
+
+    .wind,
+    .humidity,
+    .visibility,
+    .uv-index {
+        color: var(--background-heading);
+        font-weight: 600;
+    }
+
+    .wind-value,
+    .humidity-value,
+    .visibility-value,
+    .uv-index-value {
+        color: var(--value-text);
+        font-style: italic;
+    }
+}
+
+/* TABLETS */
+@media screen and (min-width: 481px) {
+    main.weather-section {
+        max-width: 500px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        border: 1rem solid rgb(11, 142, 182);
+        border-radius: 15% 20%;
+    }
+
+    main .location-time {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .other-parameters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1.5rem;
+        font-weight: 600;
+        gap: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .wind-value,
+    .humidity-value,
+    .visibility-value,
+    .uv-index-value {
+        color: var(--value-text);
+        font-style: italic;
+        padding: 0.5rem;
+    }
+}
+
