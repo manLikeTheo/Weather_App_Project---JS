@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/308ca1b61f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="weather-app-container">
+        <header class="header">
+            <div class="logo">
+                <i class="fa-solid fa-cloud-bolt"></i>
+            </div>
+            <form class="search-form" id="search-box" novalidate>
+                <input type="search" class="search-input" id="search-input" placeholder="Search location">
+                <button class="submit-btn" type="submit">Search</button>
+            </form>
+        </header>
+
+        <section class="celcius-farenheit">
+            <div class="toggle-degree">
+                <button id="celcius" class="celcius">°C, m/s
+                </button>
+                <button id="Farenheit" class="Faren7eit">°F, m/s
+                </button>
+            </div>
+        </section>
+
+        <main class="weather-section">
+            <div class="location-time">
+                <div class="city"><i class="fa-solid fa-location-dot"></i> <span class="city-name">London</span></div>
+                <div class="country">UK</div>
+                <div class="date-time">
+                 Thursday 18 May 2023 | 20:15 PM </div>
+
+                <div class="main-parameters">
+                    <div class="temperature">
+                        <i class="fa-solid fa-temperature-low"></i>
+                        <p class="temp-value">100</p>
+                    </div>
+
+                    <div class="cloud-info">Mostly Cloudy</div>
+
+                    <div class="feels-like">Feels Like <span class="feels-like-info"></span> </div>
+
+                </div>
+            </div>
+            
+                
+
+                <div class="other-parameters">
+                    <div class="wind">Wind
+                        <p class="wind-value">10</p>
+                    </div>
+                    <div class="humidity">Humidity 
+                        <p class="humidity-value">10</p>
+                    </div>
+                    <div class="visibility">Visibility
+                        <p class="visibility-value">10</p>
+                    </div>
+                    <div class="uv-index">UV-Index
+                        <p class="uv-index-value">5</p>
+                    </div>
+                </div>
+            
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="project-link">Built by: 
+            <a href="https://github.com/manLikeTheo">manLikeTheo</a>
+            <a href="https://github.com/manLikeTheo/Weather_App_Project---JS.git">Source Code</a>
+        </p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
