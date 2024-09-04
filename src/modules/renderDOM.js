@@ -1,9 +1,6 @@
-
-const renderDOM = ( () => {
-
-    function searchWeatherInfo(weatherInfo) {
-    
-    if(!weatherInfo) return //do nothing;
+const renderDOM = (() => {
+  function searchWeatherInfo(weatherInfo) {
+    if (!weatherInfo) return; //do nothing;
 
     const searchResultDisplay = document.querySelector(".weather-section");
     // searchResultDisplay.classList.add("active");
@@ -40,12 +37,11 @@ const renderDOM = ( () => {
     humidity.textContent = `${weatherInfo.humidityValue} %`;
     visibility.textContent = `${weatherInfo.visibility} km`;
     uvIndex.textContent = `${weatherInfo.uvIndex}`;
-    }
+  }
 
-
-    return { 
-            searchWeatherInfo 
-        };
+  return {
+    searchWeatherInfo,
+  };
 })();
 
 export default renderDOM;
